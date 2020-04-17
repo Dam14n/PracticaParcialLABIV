@@ -1,0 +1,9 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input matInput #message maxlength="256" placeholder="Un ID para buscar..." [(ngModel)]="idBuscado" name="idBuscado">
+    <mat-hint align="start"><strong>No use malas palabras!!!</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+  <button class="boton-buscar" mat-button (click)="buscarIdProducto()">BUSCAR POR ID</button>
+</form>

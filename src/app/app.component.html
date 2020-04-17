@@ -1,1 +1,11 @@
-<app-listado-productos [listadoProductos]="listadoProductos"></app-listado-productos>
+<div class="main-container">
+  <div>
+    <app-listado-productos [listadoProductos]="listadoProductos"></app-listado-productos>
+  </div>
+  <div>
+    <app-busqueda (buscarPorId)="buscarPorId($event)"></app-busqueda>
+    <div *ngIf="productoEncontrado">
+      <app-mostrar-producto [producto]="productoEncontrado"></app-mostrar-producto>
+    </div>
+  </div>
+</div>
